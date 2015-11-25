@@ -23,10 +23,10 @@ namespace Caliburn.Micro.Mobile.iOS.Bindings
                                          IComparer<TKey> keySort = null)
             : base(viewModel)
         {
-            view.Source = new BoundGroupedTableSource<TKey>(viewModel, view, itemsProperty, cellBinding, getKey, headerTitle, footerTitle, keySort);
+            view.Source = new BoundGroupedTableSource(viewModel, view, itemsProperty, cellBinding, getKey, headerTitle, footerTitle, keySort);
         }
 
-        private class BoundGroupedTableSource<TKey> : BoundTableSource
+        private class BoundGroupedTableSource : BoundTableSource
         {
             private readonly Func<TItem, TKey> _getKey;
             private readonly IComparer<TKey> _keySort;
@@ -69,6 +69,7 @@ namespace Caliburn.Micro.Mobile.iOS.Bindings
                         View.InsertRows(newRowGroup.Select(nr => NSIndexPath.FromRowSection(section.ToList().IndexOf(nr), sectionIndex)).ToArray(), UITableViewRowAnimation.None);
                     }
                 }
+                //TODO: Handle these so we don't have to do a ReloadData?
                 //else if (e.Action == NotifyCollectionChangedAction.Remove)
                 //{
                 //}

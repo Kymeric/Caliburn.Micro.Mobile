@@ -35,7 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bindings\Binding.cs" />
-    <Compile Include="Bindings\BindingDirection.cs" />
     <Compile Include="Bindings\UIButtonBinding.cs" />
     <Compile Include="Bindings\UITableViewBinding.cs" />
     <Compile Include="Bindings\UITableViewGroupedBinding.cs" />
