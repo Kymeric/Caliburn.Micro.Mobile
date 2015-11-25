@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +12,6 @@ namespace SimpleBindings.ViewModels
         public LoginViewModel()
         {
             Username = DateTime.Now.ToString();
-            Password = "password";
         }
 
         public string Username
@@ -46,7 +44,7 @@ namespace SimpleBindings.ViewModels
 
         public async Task AuthenticateAsync()
         {
-            Debug.WriteLine("AuthenticateAsync()");
+            
         }
     }
 }

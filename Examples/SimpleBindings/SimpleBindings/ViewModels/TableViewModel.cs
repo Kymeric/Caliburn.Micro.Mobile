@@ -11,10 +11,10 @@ namespace SimpleBindings.ViewModels
     {
         public TableViewModel()
         {
-            Items = new BindableCollection<string>(Enumerable.Range(0, 10).Select(i => $"Item{i}"));
+            Items = new BindableCollection<DateTime>(Enumerable.Range(0, 10).Select(i => DateTime.Today.AddSeconds(i)));
         }
 
-        public BindableCollection<string> Items
+        public BindableCollection<DateTime> Items
         {
             get { return _items; }
             set
@@ -26,9 +26,9 @@ namespace SimpleBindings.ViewModels
             }
         }
 
-        private BindableCollection<string> _items;
+        private BindableCollection<DateTime> _items;
 
-        public string SelectedItem
+        public DateTime SelectedItem
         {
             get { return _selectedItem; }
             set
@@ -39,7 +39,7 @@ namespace SimpleBindings.ViewModels
                 NotifyOfPropertyChange();
             }
         }
-        private string _selectedItem;
+        private DateTime _selectedItem;
 
     }
 }

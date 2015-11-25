@@ -38,11 +38,11 @@
     <Compile Include="Bindings\BindingDirection.cs" />
     <Compile Include="Bindings\UIButtonBinding.cs" />
     <Compile Include="Bindings\UITableViewBinding.cs" />
+    <Compile Include="Bindings\UITableViewGroupedBinding.cs" />
     <Compile Include="Bindings\UITextFieldBinding.cs" />
     <Compile Include="Bindings\BindingExtensions.cs" />
     <Compile Include="Controllers\UITableViewController.cs" />
     <Compile Include="Controllers\UIViewController.cs" />
-    <Compile Include="Conventions\ConventionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
