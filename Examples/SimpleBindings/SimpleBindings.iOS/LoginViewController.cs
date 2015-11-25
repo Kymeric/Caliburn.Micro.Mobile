@@ -19,8 +19,12 @@ namespace SimpleBindings.iOS
 	    public override void ViewDidLoad()
 	    {
 	        base.ViewDidLoad();
+            //Bind a simple text field
 	        Username.Bind(ViewModel, vm => vm.Username);
+            //Bind a password text field
 	        Password.Bind(ViewModel, vm => vm.Password);
+
+            //Bind Authenticate button to method
 	        Authenticate.Bind(ViewModel, vm => vm.AuthenticateAsync);
 	    }
 

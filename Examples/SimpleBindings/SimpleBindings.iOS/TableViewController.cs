@@ -24,7 +24,10 @@ namespace SimpleBindings.iOS
             //Bind as simple list
             //TableView.Bind(ViewModel, vm => vm.Items, (item, cell) => cell.TextLabel.Text = item.ToString());
             //Bind as grouped list
-            TableView.Bind(ViewModel, vm => vm.Items, (item, cell) => cell.TextLabel.Text = item.ToString(), i => i.Second % 10, g => g.Key.ToString());
+            TableView.Bind(ViewModel, vm => vm.Items, 
+                (item, cell) => cell.TextLabel.Text = item.ToString(),  // Cell Binding
+                i => i.Second % 10,                                     // Item Grouping
+                g => g.Key.ToString());                                 // Section Header generation
 
             _timer = new Timer(AddNewItem, null, 3000, 1000);
         }
